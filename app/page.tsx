@@ -22,9 +22,11 @@ export default function Home() {
       {/* Product Highlight Banner (Large Image from reference) */}
       <section className="bg-gray-100 py-12">
          <div className="max-w-7xl mx-auto px-4 overflow-hidden relative min-h-[500px] flex items-center group cursor-pointer">
-            <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400 font-bold uppercase tracking-[0.5em] group-hover:scale-105 transition-transform duration-1000">
-               Large Showcase Image
-            </div>
+            <img
+               src="https://placehold.co/1920x800/f3f4f6/9ca3af?text=Large+Product+Showcase"
+               alt="Showcase"
+               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+            />
             <div className="relative z-10 max-w-lg p-12 bg-white/90 backdrop-blur-sm ml-12 border-l-8 border-[#e85a31] shadow-2xl">
                <h3 className="text-2xl font-black text-gray-900 uppercase mb-4 italic">Mật ong Manuka Úc</h3>
                <p className="text-sm text-gray-600 mb-8 leading-relaxed">

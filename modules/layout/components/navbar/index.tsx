@@ -24,15 +24,14 @@ const Navbar = () => {
   return (
     <nav className="w-full z-50">
       {/* Top Bar - Hidden on scroll */}
-      <div 
-        className={`bg-[#e85a31] text-white text-[11px] font-medium transition-all duration-300 overflow-hidden ${
-          isScrolled ? "h-0 opacity-0" : "h-10 opacity-100"
-        }`}
+      <div
+        className={`bg-[#e85a31] text-white text-[13px] font-medium transition-all duration-300 overflow-hidden ${isScrolled ? "h-0 opacity-0" : "h-[34px] opacity-100"
+          }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
-          <div className="flex items-center space-x-6">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
+          <div className="flex items-center">
             <span>Hotline: <span className="font-bold underline">0912.989.876</span> (8h - 12h, 13h30 - 17h)</span>
-            <span className="border-l border-white/30 h-3 mx-2"></span>
+            <span className="border-l border-white/30 h-3 mx-4"></span>
             <Link href="/contact" className="hover:text-gray-200">Liên hệ</Link>
           </div>
           <div className="flex items-center space-x-2">
@@ -48,31 +47,31 @@ const Navbar = () => {
       </div>
 
       {/* Main Bar - Sticky */}
-      <div className={`bg-white transition-shadow duration-300 ${isScrolled ? "fixed top-0 left-0 w-full shadow-md" : "relative border-b border-gray-100"}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+      <div className={`bg-white transition-shadow duration-300 h-[73px] ${isScrolled ? "fixed top-0 left-0 w-full shadow-md" : "relative border-b border-gray-100"}`}>
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-full">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center space-x-2">
-                 <div className="w-10 h-10 border-2 border-[#d4b068] rounded-full flex items-center justify-center p-1">
-                    {/* Placeholder for Bee icon */}
-                    <svg viewBox="0 0 24 24" className="w-full h-full text-[#d4b068]" fill="currentColor">
-                       <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
-                    </svg>
-                 </div>
-                 <span className="text-2xl font-bold tracking-tight text-[#d4b068]">
-                   Manuka <span className="text-[#d4b068]/80 font-medium">Eco</span>
-                 </span>
+                <div className="w-10 h-10 border-2 border-[#d4b068] rounded-full flex items-center justify-center p-1">
+                  {/* Placeholder for Bee icon */}
+                  <svg viewBox="0 0 24 24" className="w-full h-full text-[#d4b068]" fill="currentColor">
+                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+                  </svg>
+                </div>
+                <span className="text-2xl font-bold tracking-tight text-[#d4b068]">
+                  Manuka <span className="text-[#d4b068]/80 font-medium">Eco</span>
+                </span>
               </Link>
             </div>
 
             {/* Navigation Links */}
             <div className="hidden lg:flex items-center space-x-8">
               {["Trang chủ", "Sản phẩm", "Blog", "Giới thiệu", "Hệ thống cửa hàng"].map((item) => (
-                <Link 
-                  key={item} 
-                  href="#" 
-                  className="text-[13px] font-bold text-gray-800 hover:text-[#e85a31] transition-colors uppercase tracking-tight"
+                <Link
+                  key={item}
+                  href="#"
+                  className="text-[14px] font-semibold text-gray-800 hover:text-[#e85a31] transition-colors py-[25px]"
                 >
                   {item}
                 </Link>
@@ -91,7 +90,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </button>
-              <button 
+              <button
                 onClick={toggleCart}
                 className="relative p-1 hover:text-black cursor-pointer group"
               >
@@ -104,7 +103,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Spacer to prevent layout jump when main bar becomes fixed */}
       {isScrolled && <div className="h-20" />}
     </nav>

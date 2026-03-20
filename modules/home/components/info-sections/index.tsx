@@ -9,9 +9,11 @@ const InfoSections = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="w-full lg:w-1/2">
              <div className="relative group overflow-hidden">
-                <div className="w-full h-[400px] bg-gray-100 flex items-center justify-center text-gray-300 font-bold uppercase tracking-widest border border-gray-100">
-                   Image Story 1
-                </div>
+                <img
+                   src="https://placehold.co/800x600/f3f4f6/9ca3af?text=Honey+Forest+Story"
+                   alt="Story 1"
+                   className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 border-8 border-white group-hover:scale-95 transition-transform duration-500"></div>
              </div>
           </div>
@@ -47,9 +49,11 @@ const InfoSections = () => {
           </div>
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
             <div className="relative group overflow-hidden">
-                <div className="w-full h-[400px] bg-gray-200 flex items-center justify-center text-gray-400 font-bold uppercase tracking-widest border border-gray-200">
-                   Image Story 2
-                </div>
+                <img
+                   src="https://placehold.co/800x600/f3f4f6/9ca3af?text=Quality+Certification"
+                   alt="Story 2"
+                   className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 border-8 border-gray-50 group-hover:scale-95 transition-transform duration-500"></div>
              </div>
           </div>

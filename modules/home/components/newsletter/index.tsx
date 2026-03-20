@@ -11,7 +11,7 @@ const Newsletter = () => {
            <input 
              type="email" 
              placeholder="Địa chỉ email của bạn" 
-             className="flex-grow border-2 border-gray-800 px-6 py-4 focus:outline-none text-sm placeholder:italic"
+             className="grow border-2 border-gray-800 px-6 py-4 focus:outline-none text-sm placeholder:italic"
            />
            <button 
              type="submit"

@@ -60,8 +60,12 @@ const Hero = () => {
       <div className="hidden lg:block absolute right-20 top-1/2 -translate-y-1/2">
          <div className="flex -space-x-12">
             {[1, 2, 3].map((i) => (
-              <div key={i} className={`w-40 h-56 bg-white border-2 border-[#d4b068] p-2 shadow-2xl transform ${i === 2 ? "-translate-y-8 scale-110 z-10" : "rotate-3"}`}>
-                 <div className="w-full h-full bg-gray-100 flex items-center justify-center text-gray-300 text-[10px] font-bold uppercase">Jar {i}</div>
+              <div key={i} className={`w-40 h-56 bg-white border-2 border-[#d4b068] p-1 shadow-2xl transform ${i === 2 ? "-translate-y-8 scale-110 z-10" : "rotate-3"}`}>
+                 <img
+                   src={`https://placehold.co/400x600/f3f4f6/9ca3af?text=Product+Jar+${i}`}
+                   alt={`Manuka Honey ${i}`}
+                   className="w-full h-full object-cover"
+                 />
               </div>
             ))}
          </div>

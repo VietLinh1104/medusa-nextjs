@@ -47,7 +47,11 @@ const ProductHighlight = () => {
                 <div className="relative">
                    <div className="absolute inset-0 bg-[#d4b068]/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
                    <div className="bg-white p-4 shadow-2xl transform lg:scale-110">
-                      <div className="w-48 h-64 bg-gray-100 flex items-center justify-center text-gray-400 font-bold uppercase text-xs">Product Jar</div>
+                      <img
+                        src="https://placehold.co/600x800/f3f4f6/9ca3af?text=Premium+Manuka+Honey"
+                        alt="Product Jar"
+                        className="w-48 h-64 object-cover"
+                      />
                    </div>
                 </div>
              </div>

@@ -6,7 +6,7 @@ const FeaturedProducts = () => {
     { id: "1", name: "Classic Cotton Tee", price: "$35.00" },
     { id: "2", name: "Tailored Linen Shirt", price: "$85.00" },
     { id: "3", name: "Premium Denim Jeans", price: "$120.00" },
-    { id: "4", name: "Minimalist Leather Bag", price: "$150.00" },
+    // { id: "4", name: "Minimalist Leather Bag", price: "$150.00" },
   ]
 
   return (
