@@ -18,9 +18,9 @@ const ProductCheck = () => {
     ]
 
     return (
-        <section className="bg-[#F6F6F6] py-20 overflow-hidden">
+        <section className="bg-[#F6F6F6] py-12 sm:py-20 overflow-hidden font-sans">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
                     {/* Left: Product Image */}
                     <div className="w-full lg:w-1/2 relative">
                         <div className="relative z-10 flex justify-center">
@@ -29,21 +29,21 @@ const ProductCheck = () => {
                                 alt="Manuka Honey Jars"
                                 width={600}
                                 height={600}
-                                className="w-full h-auto max-w-[500px] object-contain"
+                                className="w-full h-auto max-w-[320px] sm:max-w-[500px] object-contain"
                             />
                         </div>
                     </div>
 
                     {/* Right: Content */}
                     <div className="w-full lg:w-1/2">
-                        <div className="text-center lg:text-left mb-10">
-                            <p className="text-gray-400 font-medium text-[13px] text-center tracking-[0.2em] mb-2">
+                        <div className="text-center lg:text-left mb-8 sm:mb-10">
+                            <p className="text-gray-400 font-bold text-[11px] sm:text-[13px] tracking-[0.2em] mb-2 uppercase">
                                 CHI TIẾT VÀ ĐÓNG GÓI
                             </p>
-                            <h2 className="text-[34px] font-bold text-center text-gray-800 mb-4">
+                            <h2 className="text-2xl sm:text-[34px] font-bold text-gray-800 mb-4 leading-tight uppercase">
                                 Mật ong Manuka
                             </h2>
-                            <div className="flex justify-center items-center gap-2">
+                            <div className="flex justify-center lg:justify-start items-center gap-2">
                                 <div className="h-[2px] w-12 bg-gray-200"></div>
                                 <div className="w-2 h-2 bg-[#e85a31] rotate-45"></div>
                                 <div className="h-[2px] w-12 bg-gray-200"></div>

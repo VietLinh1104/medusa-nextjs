@@ -9,12 +9,12 @@ const Features = () => {
   ]
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-12 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="text-[#e85a31] text-[17px] font-medium ">Vì sao chọn chúng tôi</p>
-          <h2 className="text-[34px] font-bold text-gray-500 uppercase">Chọn Mật Ong Manuka</h2>
-          <div className="w-8 h-1 bg-[#e85a31] mx-auto mt-4"></div>
+        <div className="text-center mb-10 sm:mb-16">
+          <p className="text-[#e85a31] text-sm sm:text-[17px] font-medium ">Vì sao chọn chúng tôi</p>
+          <h2 className="text-2xl sm:text-[34px] font-bold text-gray-500 uppercase leading-tight">Chọn Mật Ong Manuka</h2>
+          <div className="w-8 h-1 bg-[#e85a31] mx-auto mt-3 sm:mt-4"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">

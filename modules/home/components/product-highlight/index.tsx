@@ -15,62 +15,61 @@ const ProductHighlight = () => {
    ]
 
    return (
-      <section className="bg-[#0F3810] py-14 relative overflow-hidden">
-         {/* Decorative circles */}
-         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-         <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+    <section className="bg-[#0F3810] py-16 sm:py-24 relative overflow-hidden">
+      {/* Decorative circles */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-5">
-               <p className="text-[#d4b068] font-semibold text-sm uppercase tracking-[0.3em] mb-1">Sản phẩm vàng</p>
-               <h2 className="text-[34px] font-bold text-white uppercase">Thành phần mật ong Manuka</h2>
-               <div className="w-8 h-1 bg-[#d4b068] mx-auto mt-4"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-10 sm:mb-20">
+          <p className="text-[#d4b068] font-semibold text-xs sm:text-sm uppercase tracking-[0.3em] mb-2">Sản phẩm vàng</p>
+          <h2 className="text-2xl sm:text-[34px] font-bold text-white uppercase leading-tight">Thành phần mật ong Manuka</h2>
+          <div className="w-8 h-1 bg-[#d4b068] mx-auto mt-4 sm:mt-6"></div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-14">
+          {/* Left Features */}
+          <div className="space-y-8 sm:space-y-12 text-center lg:text-right w-full lg:w-1/3 order-2 lg:order-1">
+            {leftFeatures.map((f, i) => (
+              <div key={i} className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-3 sm:gap-4 group">
+                <div className="px-4 lg:px-0">
+                  <h4 className="text-white text-sm sm:text-[16px] font-bold group-hover:text-[#d4b068] transition-colors">{f}</h4>
+                  <p className="text-white/60 text-xs sm:text-[14px] mt-2 leading-relaxed max-w-sm mx-auto lg:max-w-none">Chứa hàm lượng methylglyoxal tự nhiên cao dựa trên các chỉ số MGO.</p>
+                </div>
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shrink-0 border border-white/20 group-hover:border-[#d4b068] transition-colors order-first lg:order-last">
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 bg-[#d4b068] rounded-full"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Center Image */}
+          <div className="w-2/3 sm:w-1/2 lg:w-1/3 flex justify-center order-1 lg:order-2">
+            <div className="relative w-full max-w-[320px] lg:max-w-none aspect-square">
+              <Image
+                src="/assets/home_info_img_center.png"
+                alt="Product Jar"
+                fill
+                className="object-contain"
+              />
             </div>
+          </div>
 
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-10">
-               {/* Left Features */}
-               <div className="space-y-12 text-center lg:text-right w-full lg:w-1/3 order-2 lg:order-1">
-                  {leftFeatures.map((f, i) => (
-                     <div key={i} className="flex flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-end gap-4 group">
-                        <div>
-                           <h4 className="text-white text-[16px] font-bold group-hover:text-[#d4b068] transition-colors">{f}</h4>
-                           <p className="text-white/60 text-[14px] mt-1">Chứa hàm lượng methylglyoxal tự nhiên cao dựa trên các chỉ số MGO.</p>
-                        </div>
-                        <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shrink-0 border border-white/20 group-hover:border-[#d4b068] transition-colors">
-                           <div className="w-5 h-5 bg-[#d4b068] rounded-full"></div>
-                        </div>
-                     </div>
-                  ))}
-               </div>
-
-               {/* Center Image */}
-               <div className="w-full lg:w-1/3 flex justify-center order-1 lg:order-2">
-                  <div className="relative">
-                     <Image
-                        src="/assets/home_info_img_center.png"
-                        alt="Product Jar"
-                        width={376}
-                        height={376}
-                        className="w-full h-full object-cover"
-                     />
-                  </div>
-               </div>
-
-               {/* Right Features */}
-               <div className="space-y-12 text-center lg:text-left w-full lg:w-1/3 order-3">
-                  {rightFeatures.map((f, i) => (
-                     <div key={i} className="flex flex-col lg:flex-row-reverse items-center lg:items-center justify-center lg:justify-end gap-4 group">
-                        <div className="lg:text-left">
-                           <h4 className="text-white text-[16px] font-bold group-hover:text-[#d4b068] transition-colors">{f}</h4>
-                           <p className="text-white/60 text-[14px] mt-1">Chứa hàm lượng methylglyoxal tự nhiên cao dựa trên các chỉ số MGO.</p>
-                        </div>
-                        <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shrink-0 border border-white/20 group-hover:border-[#d4b068] transition-colors">
-                           <div className="w-5 h-5 bg-[#d4b068] rounded-full"></div>
-                        </div>
-                     </div>
-                  ))}
-               </div>
-            </div>
+          {/* Right Features */}
+          <div className="space-y-8 sm:space-y-12 text-center lg:text-left w-full lg:w-1/3 order-3">
+            {rightFeatures.map((f, i) => (
+              <div key={i} className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-start gap-3 sm:gap-4 group">
+                <div className="px-4 lg:px-0">
+                  <h4 className="text-white text-sm sm:text-[16px] font-bold group-hover:text-[#d4b068] transition-colors">{f}</h4>
+                  <p className="text-white/60 text-xs sm:text-[14px] mt-2 leading-relaxed max-w-sm mx-auto lg:max-w-none">Chứa hàm lượng methylglyoxal tự nhiên cao dựa trên các chỉ số MGO.</p>
+                </div>
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shrink-0 border border-white/20 group-hover:border-[#d4b068] transition-colors order-first">
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 bg-[#d4b068] rounded-full"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
          </div>
       </section>
    )

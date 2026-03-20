@@ -31,7 +31,7 @@ const News = () => {
         <div className="text-center mb-10">
           {/* HEADER */}
           <p className="text-[#e85a31] text-[17px] font-medium ">Tin tức & Sự kiện</p>
-          <h2 className="text-[34px] font-bold text-gray-500 uppercase">Bài viết mới nhất</h2>
+          <h2 className="text-2xl sm:text-[34px] font-bold text-gray-500 uppercase">Bài viết mới nhất</h2>
           <div className="w-8 h-1 bg-[#e85a31] mx-auto my-4"></div>
         </div>
 
