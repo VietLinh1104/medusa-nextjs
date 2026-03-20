@@ -1,36 +1,43 @@
-import React from "react"
-import Link from "next/link"
+import NewsCard from "@/components/news-card"
 
 const News = () => {
   const posts = [
-    { title: "Cách phân biệt mật ong Manuka thật và giả", date: "20/03/2024" },
-    { title: "Lợi ích tuyệt vời của mật ong đối với trẻ em", date: "15/03/2024" },
-    { title: "Quy trình khai thác mật ong tại Úc", date: "10/03/2024" }
+    {
+      title: "SỰ THẬT ÍT AI BIẾT: Vì Sao Mật Ong Manuka Có Lọ Đặc Quánh, Lọ Lại Trong Veo?",
+      date: "25 Tháng 11, 2025",
+      description: "Nếu anh chị từng mua mật ong Manuka và thấy lọ thì đặc quánh – mịn như kem, lọ thì trong veo – tách lớp...",
+      image: "https://images.unsplash.com/photo-1584362917165-526a968579e8?q=80&w=1976&auto=format&fit=crop",
+      href: "/news/1"
+    },
+    {
+      title: "Lợi ích tuyệt vời của mật ong đối với trẻ em",
+      date: "20 Tháng 11, 2025",
+      description: "Mật ong Manuka không chỉ là thực phẩm bổ dưỡng mà còn là bài thuốc quý giúp tăng cường hệ miễn dịch cho trẻ nhỏ.",
+      image: "https://images.unsplash.com/photo-1589927986089-35812388d1f4?q=80&w=2070&auto=format&fit=crop",
+      href: "/news/2"
+    },
+    {
+      title: "Quy trình khai thác mật ong tại các trang trại Úc",
+      date: "15 Tháng 11, 2025",
+      description: "Tìm hiểu quy trình thu hoạch mật ong nghiêm ngặt để đảm bảo giữ trọn vẹn tinh túy và hàm lượng MGO quý giá.",
+      image: "https://images.unsplash.com/photo-1589927986089-35812388d1f4?q=80&w=2070&auto=format&fit=crop",
+      href: "/news/3"
+    }
   ]
 
   return (
-    <section className="bg-gray-50 py-24 border-t border-gray-100">
+    <section className="bg-gray-50 py-16 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-           <p className="text-[#e85a31] font-bold text-xs uppercase tracking-[0.3em] mb-4 italic">Tin tức & Sự kiện</p>
-           <h2 className="text-2xl font-black text-gray-900 uppercase">Bài viết mới nhất</h2>
-           <div className="w-8 h-1 bg-[#d4b068] mx-auto mt-4"></div>
+        <div className="text-center mb-10">
+          {/* HEADER */}
+          <p className="text-[#e85a31] text-[17px] font-medium ">Tin tức & Sự kiện</p>
+          <h2 className="text-[34px] font-bold text-gray-500 uppercase">Bài viết mới nhất</h2>
+          <div className="w-8 h-1 bg-[#e85a31] mx-auto my-4"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {posts.map((post, index) => (
-            <div key={index} className="bg-white border border-gray-100 group cursor-pointer hover:shadow-2xl transition-all duration-500 overflow-hidden">
-               <div className="h-48 bg-gray-100 flex items-center justify-center text-gray-300 font-bold uppercase text-[10px] tracking-widest overflow-hidden">
-                  <span className="group-hover:scale-110 transition-transform duration-500">Thumbnail Image</span>
-               </div>
-               <div className="p-6">
-                  <p className="text-[10px] text-[#e85a31] font-bold uppercase mb-2 tracking-widest">{post.date}</p>
-                  <h3 className="text-sm font-black text-gray-900 uppercase mb-4 leading-relaxed group-hover:text-[#e85a31] transition-colors">{post.title}</h3>
-                  <Link href="#" className="text-[10px] font-bold uppercase tracking-widest text-[#d4b068] border-b border-[#d4b068] decoration-2 underline-offset-4">
-                     Xem thêm &rarr;
-                  </Link>
-               </div>
-            </div>
+            <NewsCard key={index} {...post} />
           ))}
         </div>
       </div>
