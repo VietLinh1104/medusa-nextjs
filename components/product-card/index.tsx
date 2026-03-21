@@ -3,14 +3,22 @@
 import React from "react"
 import Link from "next/link"
 
-const ProductCard = ({ id, name, price, isSoldOut }: { id: string, name: string, price: string, isSoldOut?: boolean }) => {
+const ProductCard = ({ id, name, price, isSoldOut, mgoBadge }: { id: string, name: string, price: string, isSoldOut?: boolean, mgoBadge?: string }) => {
   return (
     <Link href={`/products/${id}`} className="group block border border-gray-100 hover:shadow-lg transition-all duration-300">
       <div className="aspect-square relative overflow-hidden bg-gray-100">
         {/* Sold Out Badge */}
         {isSoldOut && (
           <div className="absolute top-2 left-2 z-20 bg-black/70 px-[10px] py-[5px] rounded-full opacity-80">
-            <p className="text-white text-[10px] font-bold h-fit w-fit tracking-wider">Hết hàng</p>
+            <p className="text-white text-[10px] font-bold h-fit w-fit tracking-wider uppercase">Hết hàng</p>
+          </div>
+        )}
+
+        {/* MGO Badge */}
+        {mgoBadge && (
+          <div className="absolute top-2 right-2 z-20 w-10 h-10 bg-black/80 rounded-full flex flex-col items-center justify-center text-white border border-white scale-75">
+            <span className="text-[6px] leading-[6px] font-bold">MGO</span>
+            <span className="text-[12px] leading-[12px] font-bold">{mgoBadge}</span>
           </div>
         )}
 
