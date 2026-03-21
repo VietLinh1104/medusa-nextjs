@@ -59,12 +59,12 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
               <ProductInfo {...product} />
             </div>
 
-            <div className="grid grid-cols-7 gap-4 mt-8">
-              <div className="col-span-5">
+            <div className="flex flex-col lg:grid lg:grid-cols-7 gap-6 lg:gap-8 mt-8">
+              <div className="lg:col-span-5 space-y-8">
                 <ProductTabs description={product.description} details={product.details} />
                 <ViewedProducts products={viewedProducts} />
               </div>
-              <div className="col-span-2">
+              <div className="lg:col-span-2">
                 <RelatedProducts products={relatedProducts} />
               </div>
             </div>

@@ -9,7 +9,7 @@ type ProductImageGalleryProps = {
 const ProductImageGallery = ({ images, name, mgoBadge }: ProductImageGalleryProps) => {
   return (
     <div className="md:w-1/2 space-y-4">
-      <div className="aspect-4/5 bg-white border border-gray-100 flex items-center justify-center p-8 relative">
+      <div className="aspect-1 bg-white border border-gray-100 flex items-center justify-center p-8 relative">
         <img
           src={`https://placehold.co/500x600/ffffff/000000?text=${encodeURIComponent(mgoBadge || "PRODUCT")}`}
           alt={name}
